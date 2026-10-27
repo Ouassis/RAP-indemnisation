@@ -1,0 +1,33 @@
+managed implementation in class ZBP_I_RAP_INDEMREQ unique;
+strict ( 2 );
+
+define behavior for ZI_RAP_IndemRequest alias Request
+  persistent table zrap_indem_req
+  lock master
+  authorization master ( instance )
+  etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) RequestUUID,
+                     Status,
+                     Reviewer,
+                     DecisionReason,
+                     PaymentReference,
+                     CreatedBy,
+                     CreatedAt,
+                     LastChangedBy,
+                     LastChangedAt,
+                     LocalLastChangedAt;
+
+  field ( mandatory ) Requester,
+                      Amount,
+                      CurrencyCode,
+                      RequestDate,
+                      Reason;
+
+  determination setInitialStatus on modify { create; }
+  validation validateRequest on save { create; update; }
+}
