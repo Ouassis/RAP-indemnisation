@@ -11,10 +11,13 @@ define behavior for ZI_RAP_IndemRequest alias Request
   update;
   delete;
 
+  action Submit result [1] $self;
+  action Approve result [1] $self;
+  action Reject result [1] $self;
+
   field ( readonly ) RequestUUID,
                      Status,
                      Reviewer,
-                     DecisionReason,
                      PaymentReference,
                      CreatedBy,
                      CreatedAt,
