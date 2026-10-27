@@ -63,7 +63,7 @@ The initial implementation should keep business rules in the RAP business object
 4. Run syntax checks, ATC, ABAP Unit, authorization tests, and end-to-end tests.
 5. Document transport and rollback steps before deployment.
 
-ABAP artifacts in this repository are design and development assets, not a claim that code has been activated or validated in an SAP system. All code must be reviewed and tested in a compatible non-production SAP environment.
+ABAP artifacts in this repository are initial implementation starters, not a claim that code has been activated or validated in an SAP system. The target SAP release is not yet known. Review the access-control placeholder, implement the instance authorization handler, validate RAP syntax against the target release, and run syntax/activation checks, ATC, ABAP Unit, and service-level tests in a compatible non-production SAP environment.
 
 ## Product ownership and licensing
 
