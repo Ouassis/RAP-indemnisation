@@ -1,0 +1,8 @@
+@MappingRole: true
+define role ZRAP_IndemRequest {
+  /* TODO: Replace this deny-by-default placeholder with reviewed business
+     authorization rules for the target system. Do not expose the service
+     broadly until row-level access and approver permissions are defined. */
+  grant select on ZI_RAP_IndemRequest
+    where 1 = 2;
+}
