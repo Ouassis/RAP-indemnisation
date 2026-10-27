@@ -1,0 +1,4 @@
+@EndUserText.label: 'Indemnisation Request Service'
+define service ZUI_RAP_INDEMREQ {
+  expose ZC_RAP_IndemRequest as IndemnisationRequest;
+}
