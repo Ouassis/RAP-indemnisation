@@ -1,0 +1,58 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Indemnisation Request',
+  typeNamePlural: 'Indemnisation Requests',
+  title: { type: #STANDARD, value: 'RequestUUID' },
+  description: { type: #STANDARD, value: 'Status' }
+}
+annotate entity ZC_RAP_IndemRequest with
+{
+  @UI.facet: [
+    {
+      id: 'Request',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Request Details',
+      position: 10
+    }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  RequestUUID;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  Requester;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @UI.selectionField: [{ position: 10 }]
+  Amount;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  CurrencyCode;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @UI.selectionField: [{ position: 20 }]
+  RequestDate;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @UI.selectionField: [{ position: 30 }]
+  Status;
+
+  @UI.identification: [{ position: 70 }]
+  Reason;
+
+  @UI.identification: [{ position: 80 }]
+  Reviewer;
+
+  @UI.identification: [{ position: 90 }]
+  DecisionReason;
+
+  @UI.identification: [{ position: 100 }]
+  PaymentReference;
+}
